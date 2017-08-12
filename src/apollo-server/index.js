@@ -14,5 +14,5 @@ app.use(cors());
 app.use('/graphql', bodyParser.json(), graphqlExpress({ schema: schema }));
 
 app.listen(PORT, () => {
-  console.log('Great, server running');
+  console.log('Great, open a new command prompt and run yarn dev!');
 });

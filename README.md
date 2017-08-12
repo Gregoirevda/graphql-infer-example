@@ -1,3 +1,5 @@
 Proof of concept to infer properties used on object and generate graphQL query
 
-yarn start to try it out.
+`yarn start` to try it out. 
+
+then `yarn dev`

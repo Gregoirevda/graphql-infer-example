@@ -19,7 +19,7 @@
     "react-scripts": "1.0.11"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "start:server": "node src/apollo-server/"
+    "start": "node src/apollo-server/",
+    "dev": "react-scripts start"
   }
 }

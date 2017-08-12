@@ -4,7 +4,7 @@ const {makeExecutableSchema} = require('graphql-tools');
 // Construct a schema, using GraphQL schema language
 const typeDefs = `
 	type Person {
-	  age: Int
+	  age: Float
 	  name: String
 	}
 
@@ -17,8 +17,8 @@ const typeDefs = `
 const resolvers = {
   Query: {
     person: () => ({
-      age: 27,
-      name: 'Gregoire'
+      age: 0.5,
+      name: 'A proof of concept'
     })
   }
 };

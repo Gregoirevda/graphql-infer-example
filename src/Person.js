@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {gredux} from './gredux/gredux';
-import {gql, graphql} from 'react-apollo';
 
 class Person extends Component {
 
@@ -9,21 +8,15 @@ class Person extends Component {
   }
 
   render() {
-  console.log(this.props);
     const {person, result} = this.props;
     return <div>
-      {/*<h4>I'm {person.age} years old. {person.name}</h4>*/}
-      {/*<pre>{result}</pre>*/}
+      <h3>I'm {person.name}</h3>
+
+      <h4>I'm {person.age} years old.</h4>
     </div>
   }
 }
-const query = gql` query person {
-  person {
-    age,name
-  }
-}`;
-
-export default graphql(query)(Person);
+export default gredux({ query: 'person'})(Person);
 
 
 
