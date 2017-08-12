@@ -17,5 +17,5 @@ app.use('/graphql', bodyParser.json(), (req, res, next) => {
 }, graphqlExpress({ schema: schema }));
 
 app.listen(PORT, () => {
-  console.log('Great, now open a new tab and run npm dev');
+  console.log('Great, server running');
 });

@@ -20,8 +20,6 @@ export const gredux = config => WrappedComponent => {
 
     componentDidMount = async() => {
       const queryObj = this.state[config.query];
-      console.log('gredux did mount', this.state[config.query]);
-      console.log(Object.keys(queryObj));
       const query = `
           query ${config.query} {
             ${config.query} {
