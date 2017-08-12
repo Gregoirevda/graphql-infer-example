@@ -11,10 +11,7 @@ const app = express();
 app.use(cors());
 
 // bodyParser is needed just for POST.
-app.use('/graphql', bodyParser.json(), (req, res, next) => {
-  console.log(req);
-  next();
-}, graphqlExpress({ schema: schema }));
+app.use('/graphql', bodyParser.json(), graphqlExpress({ schema: schema }));
 
 app.listen(PORT, () => {
   console.log('Great, server running');
