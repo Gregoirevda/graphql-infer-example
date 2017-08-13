@@ -6,7 +6,7 @@ import {graphql} from 'react-apollo';
 /*
 HoC
 */
-export const gredux = config => WrappedComponent => {
+export const graphqlInfer = config => WrappedComponent => {
   return class extends Component {
 
     constructor(props) {

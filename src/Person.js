@@ -1,27 +1,21 @@
-import React, {Component} from 'react';
-import {gredux} from './gredux/gredux';
+import React from 'react';
 
-class Person extends Component {
+import './App.css';
+import {graphqlInfer} from './graphql-infer';
 
-  constructor(props) {
-    super(props);
-  }
+const Person = ({person, result}) => <div className="poc">
+  <h3>I'm {person.name}</h3>
+  <h4>I'm {person.age} years old.</h4>
+</div>;
 
-  render() {
-    const {person, result} = this.props;
-    return <div>
-      <h3>I'm {person.name}</h3>
-
-      <h4>I'm {person.age} years old.</h4>
-    </div>
-  }
-}
-export default gredux({ query: 'person'})(Person);
-
+export default graphqlInfer({ query: 'person'})(Person);
 
 
 /**
- In the apollo-server directory, you can see that our defined graphql schema looks like
+ Here we're telling graphqlInfer to query person on Query type.
+
+ Our schema
+
  type Query {
     person: Person
  }
@@ -31,5 +25,4 @@ export default gredux({ query: 'person'})(Person);
    age: Number
  }
 
- Here we're telling gredux to query person on Query type.
  */
